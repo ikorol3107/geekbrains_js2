@@ -1,0 +1,86 @@
+{
+  "cart": [],
+  "products": [
+    {
+      "id": 123,
+      "name": "Ноутбук",
+      "price": 45600,
+      "url": "img/product_101.png"
+    },
+    {
+      "id": 456,
+      "name": "Мышка",
+      "price": 1000,
+      "url": "img/product_101.png"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Vasya Pupkin",
+      "message": "Все плохо",
+      "rate": 5,
+      "approved": 0,
+      "color": "black"
+    },
+    {
+      "id": 2,
+      "name": "Petya Dejfekj",
+      "message": "Все хорошо",
+      "rate": 5,
+      "approved": 0,
+      "color": "black"
+    },
+    {
+      "message": "Все зашибись",
+      "name": "Vasya Pupkin",
+      "id": 3,
+      "rate": 5,
+      "approved": 0,
+      "color": "black"
+    },
+    {
+      "message": "Все супер",
+      "name": "Kolya Pupkin",
+      "id": 4,
+      "rate": 5,
+      "approved": 0,
+      "color": "black"
+    }
+  ],
+  "post": [
+    {
+      "message": "Все зашибись",
+      "name": "Vasya Pupkin",
+      "id": "3",
+      "rate": "0",
+      "approved": "1"
+    },
+    {
+      "message": "Все плохо",
+      "name": "Vasya Pupkin",
+      "id": "1",
+      "rate": "0",
+      "approved": "1"
+    },
+    {
+      "message": "Все супер",
+      "name": "Kolya Pupkin",
+      "id": "4",
+      "rate": "0",
+      "approved": "1"
+    }
+  ],
+  "interAccounts": [
+    {
+      "id": 1,
+      "Name": "Login in my account",
+      "url": "checkout.html"
+    },
+    {
+      "id": 2,
+      "Name": "Create a new account",
+      "url": "checkout.html"
+    }
+  ]
+}

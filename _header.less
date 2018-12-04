@@ -1,0 +1,287 @@
+@width: 1140px;
+@border-bottom: 1px solid #ececec;
+@border: 1px solid #ececec;
+@color: #f16d7f;
+.header {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ececec;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+    height: 100px;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    width: 650px;
+    justify-content: flex-start;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 165px;
+    justify-content: space-between;
+    font-size: 27px;
+    font-weight: 300;
+    color: #222222;
+}
+.logo b {
+    color: #f16d7f;
+}
+.logo span {
+    padding-left: 13px;
+}
+.header-button-browse {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    background-color:  #e6e6e6;
+    height: 38px;
+    margin-left: 45px;
+}
+.header-button-browse-summary {
+    margin-top: 8px;
+    color:  #222222;
+    font-size: 14px;
+    font-weight: 300;
+    padding-left: 20px;
+	outline: none;
+    position: relative;
+}
+.header-button-browse-summary:hover {
+    font-weight: 400;
+}
+.header-button-browse-summary::-webkit-details-marker {
+  display: none;
+}
+.header-button-browse-summary::after {
+    content: '\25BC';
+    color: #838383;
+	font-size: 12px;
+    padding: 8px;  
+}
+details[open] .header-button-browse-summary::after {
+    content: '\25B2';
+	font-size: 12px;
+    padding: 8px;
+}
+.category_button_browse {
+  list-style-type: none;
+    border: 1px solid #ececec;;
+    background-color: #ffffff;
+    width: 150px;
+    margin-top: 20px;
+    margin-left: -50px;
+    position: absolute;
+}
+input[type="search"] {
+    color:  #a4a4a4;
+    font-size: 14px;
+    font-weight: 300;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #e6e6e6;
+    box-sizing: border-box;
+    background-color:  #ffffff;
+    width: 290px;
+    height: 38px;
+    padding: 0 15px;
+}
+.header_button_submit {
+    width: 40px;
+    height: 38px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:  #e6e6e6;
+    background-color:  #ffffff;
+    border-left: none;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-right-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+.header-right-cart:hover .shopping-cart-mega {
+    display: flex;
+}
+.shopping-cart-triangle {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    position: absolute;
+    top: -7px;
+    left: 50px;
+    transform: rotate(45deg) skew(-8deg, -8deg);
+    border-top: 1px solid #e9e9e9;
+    border-left: 1px solid #e9e9e9;
+}
+.shopping-cart-mega {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9e9e9;
+    padding: 0 20px;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    top: 40px;
+    left: -50px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.cart-mega-products {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.cart-mega-product {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ededed;
+}
+.cart-mega-product p {
+    padding-top: 7px;
+    padding-left: 10px;
+    color: #222222;
+}
+.cart-mega-product span {
+    color: @color;
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.cart-mega-product a {
+transition: transform 0.3s ease-out;
+}
+.cart-mega-product a:hover {
+    transform: scale(1.1);
+}
+.pic-cart {
+    width: 75px;
+    height: 85px;
+    background-color: #f7f7f9;
+    margin: 10px 0;
+}
+.rate-container {
+    font-variant: small-caps;
+    margin: 10px;
+    color: gold;
+}
+.rate-container > i:hover,
+.rate-container > i:hover ~ i {
+    color: #e6e6e6;
+   
+}
+.cart-button-delete {
+    display: flex;
+    align-items: center;
+}
+.total-text {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0 30px 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.mega-cart-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.mega-cart-button {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    margin-top: 5px;
+}
+.mega-cart-button:hover {
+    color: @color;
+}
+.header-button-my_account {
+    border-radius: 3px;
+    background-color:  #f16d7f;
+    height: 38px;
+    margin-left: 25px;
+}
+.header-button-summary {
+    margin-top: 4px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 400;
+    color:  #ffffff;
+    padding-left: 20px;
+	outline: none;
+    position: relative;
+}
+.header-button-summary:hover {
+    color: #222222;
+}
+.header-button-summary::-webkit-details-marker {
+  display: none;
+}
+
+.header-button-summary::after {
+    content: '\25BC';
+    padding-left: 0.5em;
+	font-size: 12px;
+    padding: 10px;
+    
+}
+
+details[open] .header-button-summary::after {
+    content: '\25B2';
+    padding-left: 0.5em;
+	font-size: 12px;
+    padding: 10px;
+}
+.category_button_my_account {
+  list-style-type: none;
+    border: @border;
+    background-color: #ffffff;
+    width: 260px;
+    margin-top: 10px;
+    margin-left: -50px;
+    position: absolute;
+}
+.accountWindow {
+    list-style-type: none;
+    background-color: #f16d7f;
+    border: @border;
+    width: 260px;
+    height: 200px;
+    position: absolute;
+}

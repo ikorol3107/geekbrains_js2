@@ -6,13 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="cart.js"></script>
+    <script src="accountButton.js"></script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container header-flex">
+    <header id="header" class="header">
+        <div class="container-header-flex">
             <div class="header-left">
-                <a class="logo" href="#"><img src="img/logo.png" alt="logo"><span>BRAN<b>D</b></span></a>
+                <a class="logo" href="index.html"><img src="img/logo.png" alt="logo"><span>BRAN<b>D</b></span></a>
                     <div class="header-button-browse">
                     <details>
                     <summary class="header-button-browse-summary">Browse</summary>
@@ -97,21 +100,54 @@
                             </fieldset>
                         </div>
                     </div>
-                <div class="header-button-my_account">
-                       <details>
-                        <summary class="header-button-summary">My Account</summary>
-                            <ul class="category_button_my_account">
-                                <li>list-1</li>
-                                <li>list-2</li>
-                                <li>list-3</li>
-                            </ul>
-                        </details>
-                   </div>
+                
                 </div>
+                <div class="header-button-my_account">
+                    <details>
+                      <summary class="header-button-summary">My Account</summary>
+                      </details> 
+                 </div>
+                 <div id="accountPanel"></div>
               </div>
+              <form class="user-information-form-product">
+                <fieldset class="user-information-fieldset">
+                    <legend>Check as a guest or register</legend>
+                    <p>Register with us for future convenience</p>
+                    <div class="register-checkout">
+                       <label for="CHECKOUT-AS-A-GUEST">
+                        <input id="CHECKOUT-AS-A-GUEST" type="radio" name="CHE" required>
+                        CHECKOUT AS A GUEST
+                       </label>
+                    </div>
+                    <div class="register-checkout">
+                       <label for="REGISTER">
+                        <input id="REGISTER" type="radio" name="CHE">
+                        REGISTER
+                       </label>
+                    </div>
+                    <h4 class="register-checkout-h">register and save time!</h4>
+                    <p class="p-register-with">Register with us for future convenience</p>
+                    <a href="#"><p>&raquo; Fast and easy checkout</p></a>
+                    <a href="#"><p>&raquo; Easy access to your order history and status</p></a>
+                    <button class="continue_button">Continue</button>
+                </fieldset>
+                <fieldset class="user-information-fieldset">
+                    <legend>Already registed?</legend>
+                    <p>Please log in below</p>
+                    <label for="email">Email<em>*</em></label><br>
+                    <input id="email" placeholder="email@server.com" required="" pattern="\S+@[a-z]+.[a-z]+">
+                    <br>
+                    <label for="password">Password<em>*</em></label><br>
+                    <input type="password" id="password" name="password"
+                           minLength="8" required
+                           placeholder="8 characters minimum"/><br>
+                        <span>* Required Fileds</span><br>
+                    <input id="signin-button" type="submit" value="Sign in">
+                </fieldset>
+             </form>
         </div>
     </header>
-    <div class="the-brand">
+   <div class="the-brand-product">
         <nav class="parent-nav">
             <div class="container nav">
                 <ul class="menu">
@@ -339,49 +375,130 @@
                 </ul>
             </div>
         </nav>
-        <div class="container brand-img">
-            <div class="text-brand">
-                <h2>THE BRAND</h2>
-                <h3>OF LUXERIOUS <span>FASHION</span></h3>
+        <nav class="breadcrumbs">
+            <div class="container breadcrumbs">
+                <div class="breadcrumbs-left">
+                    <h3>NEW ARRIVALS</h3>
+                </div>
+                <div class="breadcrumbs-right">
+                    <nav class="breadcrumb-nav">
+                     <ul>
+                         <li><a href="index.html">HOME</a></li>
+                         <li><a href="#"> / MAN</a></li>
+                         <li><a href="#"> / NEW ARRIVALS</a></li>
+                     </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
+        </nav>
     </div>
-    <div class="current-offers">
-           <div class="offers-left"> 
-               <div class="men-img">
-                    <div class="men-text">
-                        <h7>HOT DEAL</h7>
-                        <h4><a href="#">FOR MAN</a></h4> 
+    <div class="container selection-product">
+        <nav class="selection-product-nav">
+             <details>
+                    <summary class="product-nav">CATEGORY</summary>
+                    <ul class="category-product">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a>Bags</a></li>
+                        <li><a>Denim</a></li>
+                        <li><a>Hoodies &amp; Sweatshirts</a></li> 
+                        <li><a>Jackets &amp; Coats</a></li> 
+                    </ul>
+                </details>
+                 <details>
+                    <summary class="product-nav">BRAND</summary>
+                    <ul class="category-product">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a>Bags</a></li>
+                        <li><a>Denim</a></li>
+                        <li><a>Hoodies &amp; Sweatshirts</a></li> 
+                        <li><a>Jackets &amp; Coats</a></li> 
+                    </ul>
+                </details>
+                 <details>
+                    <summary class="product-nav">DESIGNER</summary>
+                    <ul class="category-product">
+                        <li><a href="#">Accessories</a></li>
+                        <li><a>Bags</a></li>
+                        <li><a>Denim</a></li>
+                        <li><a>Hoodies &amp; Sweatshirts</a></li> 
+                        <li><a>Jackets &amp; Coats</a></li> 
+                    </ul>
+                </details>
+        </nav>
+        <div class="selection-product-box">
+            <div class="product-box-filter">
+                <div class="trending-product">
+                   <h3>TRENDING NOW</h3>
+                    <div class="trending-product-box">
+                        <p class="p-1">Bohemian</p>
+                        <p class="p-2">Floral</p>
+                        <p class="p-3">Lace</p> 
+                        <p class="p-1">Lace</p>
+                        <p class="p-2">Floral</p>
+                        <p class="p-3">Bohemian</p>
                     </div>
                 </div>
-                <div class="accesories-img">
-                    <div class="accesories-text">
-                        <h7>LUXIROUS &amp; TRENDY</h7>
-                        <h4><a href="#">ACCESORIES</a></h4> 
-                    </div>
-                </div>   
-            </div>
-            <div class="offers-right">
-               <div class="women-img">
-                    <div class="women-text">
-                        <h7>30 &#37; OFFER</h7>
-                        <h4><a href="#">WOMEN</a></h4> 
-                    </div>
+                <div class="size-product">
+                   <h3>SIZE</h3>
+                    <fieldset class="fieldset-size-product">
+                        <label class="fieldset-size-product-label" for="XXS">
+                        <input id="XXS" type="checkbox">&nbsp;&nbsp;XXS
+                        </label>
+                        <label class="fieldset-size-product-label" for="XS">
+                        <input id="XS" type="checkbox">&nbsp;&nbsp;XS
+                        </label>
+                        <label class="fieldset-size-product-label" for="S">
+                        <input id="S" type="checkbox">&nbsp;&nbsp;S
+                        </label>
+                        <label class="fieldset-size-product-label" for="M">
+                        <input id="M" type="checkbox">&nbsp;&nbsp;M
+                        </label>
+                        <label class="fieldset-size-product-label" for="L">
+                        <input id="L" type="checkbox">&nbsp;&nbsp;L
+                        </label>
+                        <label class="fieldset-size-product-label" for="XL">
+                        <input id="XL" type="checkbox">&nbsp;&nbsp;XL
+                        </label>
+                        <label class="fieldset-size-product-label" for="XXL">
+                        <input id="XXL" type="checkbox">&nbsp;&nbsp;XXL
+                        </label>
+                        </fieldset>
                 </div>
-                <div class="kids-img">
-                    <div class="kids-text">
-                        <h7>NEW ARRIVALS</h7>
-                        <h4><a href="#">FOR KIDS</a></h4> 
-                    </div>
-                </div> 
+                <div class="price-product">
+                   <h3>PRICE</h3>
+                    <input id="range" type="range" value="10" step="0.1">
+                </div>
+             </div>
+            <div class="sort-by">
+                <div class="first-sort-button">
+                    <div class="f-s-b">Sort by</div>
+                    <fieldset class="f-s-b">
+                        <input id="sort-by-button" list="Sort-by-button" placeholder="Sort by">
+                    </fieldset>
+                    <datalist id="Sort-by-button">
+                        <option value="Name"></option>
+                        <option value="Style"></option>
+                        <option value="Price"></option>
+                        <option value="Size"></option>
+                    </datalist>
+                </div>
+                <div class="first-sort-button">
+                    <div class="f-s-b">Show</div>
+                    <fieldset class="f-s-b">
+                        <input id="sort-by-button" list="Show-button" placeholder="09">
+                    </fieldset>
+                    <datalist id="Show-button">
+                        <option value="9"></option>
+                        <option value="18"></option>
+                        <option value="36"></option>
+                        <option value="Sow all"></option>
+                    </datalist>
+                </div>  
+                   
             </div>
-    </div>
-    <div class="container tac">
-      <h4 class="tac heading-product">Featured Items</h4>
-      <p class="tac">Shop for items based on what we featured in this week</p>
-       <div class="products">
-          <div class="parent-product">
-              <a class="product" href="product.html" target="_blank"><img src="img/product_1.jpg" alt="photo product">
+            <div id="products" class="products">
+          <!-- <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
@@ -391,8 +508,8 @@
                   <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
-          <div class="parent-product">
-              <a class="product" href="#"><img src="img/product_1.jpg" alt="photo product">
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
@@ -402,8 +519,8 @@
                   <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
-          <div class="parent-product">
-              <a class="product" href="#"><img src="img/product_1.jpg" alt="photo product">
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
@@ -413,8 +530,8 @@
                   <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
-          <div class="parent-product">
-              <a class="product" href="#"><img src="img/product_1.jpg" alt="photo product">
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
@@ -424,8 +541,8 @@
                   <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
-          <div class="parent-product">
-              <a class="product" href="#"><img src="img/product_1.jpg" alt="photo product">
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
@@ -435,8 +552,8 @@
                   <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
-          <div class="parent-product">
-              <a class="product" href="#"><img src="img/product_1.jpg" alt="photo product">
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
@@ -446,8 +563,8 @@
                   <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
-          <div class="parent-product">
-              <a class="product" href="#"><img src="img/product_1.jpg" alt="photo product">
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
@@ -457,39 +574,64 @@
                   <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
-          <div class="parent-product">
-              <a class="product" href="#"><img src="img/product_1.jpg" alt="photo product">
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
                   <div class="product-text">  
                       <p>Mango People T-shirt</p>
                       <span>$52</span>
                   </div>
               </a>
               <div class="pos-add-to-cart">
-                  <a class="add-to-cart" href="#">Add to Cart</a>
+                  <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
               </div>   
           </div>
+          <div class="parent-product-list">
+              <a class="product" href="#"><img src="img/product_101.png" alt="photo product">
+                  <div class="product-text">  
+                      <p>Mango People T-shirt</p>
+                      <span>$52</span>
+                  </div>
+              </a>
+              <div class="pos-add-to-cart">
+                  <a class="add-to-cart" href="#"><img src="img/cart_1.png">Add to Cart</a>
+              </div>   
+          </div> -->
+
        </div> 
-    </div>
-    <div class="button-product">
-        <a class="all-product" href="product.html">Browse All Product &nbsp;&rarr;</a>
-    </div>
-    <div class="container-conditions">
-        <div class="conditions-left">
-            <h3>30 &#37; <b>OFFER</b></h3>
-            <h4>FOR WOMEN</h4>
+            <div class="pagination">
+              <nav class="pagination-products">
+                <ul class="pagination-products-ul">
+                    <li><a href="#">&lt;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">20</a></li>
+                    <li><a href="#">&gt;</a></li>
+                </ul>
+              </nav>
+                <button class="view-all">View All
+                </button>  
+            </div> 
         </div>
-        <div class="conditions-right">
-           <table>
+     
+     
+     
+    </div>
+    <div class="conditions-product">
+        <div class="container-conditions-product">
+            <table>
                <tr>
-                   <td class="condition-icon"><img src="img/pic1.png" alt="pic1"></td>
+                  <td class="condition-icon"><img src="img/pic1.png" alt="pic1"></td>
+                  <td class="condition-icon"><img src="img/pic2.png" alt="pic2"></td> 
+                  <td class="condition-icon"><img src="img/pic3.png" alt="pic3"></td> 
+               </tr>
+               <tr>       
                    <td><p><span>Free Delivery</span><br>Worldwide delivery on all. Next-geniration innovation.</p></td>
-               </tr>
-               <tr>
-                   <td class="condition-icon"><img src="img/pic2.png" alt="pic2"></td>
                    <td><p><span>Sales &amp; discounts</span><br>Worldwide delivery on all. Next-geniration innovation.</p></td>
-               </tr>
-               <tr>
-                   <td class="condition-icon"><img src="img/pic3.png" alt="pic3"></td>
                    <td><p><span>Quality assurance</span><br>Worldwide delivery on all. Next-geniration innovation.</p></td>
                </tr>
            </table>
@@ -523,8 +665,8 @@
                 <nav class="footer-company">
                     <h7>COMPANY</h7>
                     <ul class="footer-ul">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Shop</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Shop</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">How It Woks</a></li>
                         <li><a href="#">Contact</a></li>
@@ -547,7 +689,7 @@
                         <li><a href="#">Women</a></li>
                         <li><a href="#">Child</a></li>
                         <li><a href="#">Apparel</a></li>
-                        <li><a href="product.html">Brows All</a></li>
+                        <li><a href="#">Brows All</a></li>
                     </ul>
                 </nav>    
          
